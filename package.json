@@ -17,11 +17,13 @@
     "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:package-json": "prettier-package-json -l",
     "lint:prettier": "prettier --check .",
+    "lint:stylelint": "stylelint --aei '**/*.{jsx,tsx}'",
     "lint:tsc": "tsc",
     "lint-fix": "run-s -c lint-fix:*",
     "lint-fix:eslint": "npm run lint:eslint -- --fix",
     "lint-fix:package-json": "prettier-package-json --write",
     "lint-fix:prettier": "prettier --write .",
+    "lint-fix:stylelint": "npm run lint:stylelint -- --fix",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
     "test": "jest"
@@ -55,8 +57,13 @@
   "lint-staged": {
     "package.json": "prettier-package-json --write",
     "*.{md,json,html}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,ts}": [
       "eslint --fix --ext .js,.jsx,.ts,.tsx",
+      "prettier --write"
+    ],
+    "*.{jsx,tsx}": [
+      "eslint --fix --ext .js,.jsx,.ts,.tsx",
+      "stylelint --fix --aei",
       "prettier --write"
     ]
   },
