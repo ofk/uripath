@@ -1,10 +1,10 @@
 {
-  "private": true,
   "name": "uripath",
   "version": "0.0.1",
-  "description": "",
-  "license": "UNLICENSED",
-  "author": "",
+  "description": "uripath provides utilities for node:path compatible uri operation.",
+  "license": "MIT",
+  "author": "ofk <ofkjpn+npm@gmail.com> (https://github.com/ofk/)",
+  "repository": "ofk/uripath",
   "main": "dist/uripath.js",
   "files": [
     "dist",
