@@ -1,5 +1,5 @@
 {
-  "name": "uripath",
+  "name": "@ofk/uripath",
   "version": "0.0.1",
   "description": "uripath provides utilities for node:path compatible uri operation.",
   "license": "MIT",
